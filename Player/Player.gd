@@ -15,9 +15,9 @@ func _physics_process(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
-		if (Input.get_action_strength("ui_home")):
+		if (Input.get_action_strength("ui_shift")):
 			velocity = velocity.move_toward(input_vector * (MAX_SPEED + 500), ACCELERATION * delta)
-		elif (Input.get_action_strength("ui_end")):
+		elif (Input.get_action_strength("ui_ctrl")):
 			velocity = velocity.move_toward(input_vector * (MAX_SPEED - 100), ACCELERATION * delta)
 		else:
 			velocity = velocity.move_toward(input_vector * (MAX_SPEED), ACCELERATION * delta)
