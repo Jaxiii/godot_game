@@ -12,6 +12,8 @@ func _physics_process(delta):
 	
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	input_vector.x = Input.get_action_strength("ui_d") - Input.get_action_strength("ui_a")
+	input_vector.y = Input.get_action_strength("ui_s") - Input.get_action_strength("ui_w")
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
